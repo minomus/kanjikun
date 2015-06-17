@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  # Userクラスを作成していないので、擬似的なUser構造体を作る
+	User = Struct.new(:name, :email)
+  
   # GET /posts
   # GET /posts.json
   def index
@@ -22,12 +25,18 @@ class PostsController < ApplicationController
   end
 
   # POST /posts
-  # POST /posts.json
+  # POST /posts.json.
   def create
-    @post = Post.new(post_params)
+   @post = Post.new(post_params)
 
     respond_to do |format|
       if @post.save
+        # 擬似的なUser構造体を作成する
+      	user = User.new("name", "<minomus.kanjikun@gmail.com>")
+
+      	# deliverメソッドを使って、メールを送信する
+      	PostMailer.post_email(user, @post).deliver
+
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
