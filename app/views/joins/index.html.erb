@@ -1,4 +1,4 @@
-ist<h1>Listing joins</h1>
+<h1>参加者登録ページ</h1>
 
 <table>
   <thead>
@@ -16,7 +16,7 @@ ist<h1>Listing joins</h1>
         <td><%= join.belong %></td>
         <td><%= link_to 'Show', join %></td>
         <td><%= link_to 'Edit', edit_join_path(join) %></td>
-        <td><%= link_to 'Destroy', join, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', join, method: :delete, data: { confirm: '本当に取り消しますか?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@ ist<h1>Listing joins</h1>
 
 <br>
 
-<%= link_to 'New Join', new_join_path %>
+<%= link_to '参加', new_join_path %>

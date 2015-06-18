@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>名前:</strong>
   <%= @join.name %>
 </p>
 
 <p>
-  <strong>Belong:</strong>
+  <strong>所属:</strong>
   <%= @join.belong %>
 </p>
 
-<%= link_to 'Edit', edit_join_path(@join) %> |
-<%= link_to 'Back', joins_path %>
+<%= link_to '登録内容変更', edit_join_path(@join) %> |
+<%= link_to '参加者登録ページ', joins_path %>
