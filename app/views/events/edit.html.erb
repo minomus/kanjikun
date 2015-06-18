@@ -1,6 +1,17 @@
-<h1>Editing event</h1>
+<h1>イベントの変更</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+<% form_tag :action => 'update', :id => @event do %>
+  <%= render 'form' %>
+  <%= submit_tag 'Edit' %>
+<% end %>
+ 
+<b>Joins:</b>
+<ul>
+  <% @event.joins.each do |j| %>
+  <li><%= link_to h(j.title) :action => 'show', :controller => 'joins', :id => j.id %></li>
+  <% end %>    
+</ul>
+|
+<%= link to 'Add Join', :action => 'new', :controller => 'joins', :id => @event.id %> |
+<%= link_to 'Show', action => 'show', id => @event %>
+<%= link_to 'Back', :action => 'list' %>

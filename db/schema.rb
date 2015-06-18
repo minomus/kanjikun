@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150618012200) do
+ActiveRecord::Schema.define(version: 20150618042959) do
+
+  create_table "eventlists", force: true do |t|
+    t.string   "date"
+    t.string   "eventsName"
+    t.string   "freeSpace"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "events", force: true do |t|
     t.string   "date"
@@ -26,6 +34,7 @@ ActiveRecord::Schema.define(version: 20150618012200) do
     t.string   "belong"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "event_id"
   end
 
   create_table "posts", force: true do |t|
@@ -36,6 +45,14 @@ ActiveRecord::Schema.define(version: 20150618012200) do
     t.text     "freeSpace"
     t.text     "to"
     t.string   "me"
+  end
+
+  create_table "registrations", force: true do |t|
+    t.string   "date"
+    t.string   "eventsName"
+    t.string   "freeSpace"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
