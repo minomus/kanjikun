@@ -3,8 +3,6 @@
 <table>
   <thead>
     <tr>
-      <th>To</th>
-      <th>Me</th>
       <th>date</th>
       <th>eventName</th>
       <th>freeSpace</th>
@@ -15,8 +13,6 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.to %></td>
-        <td><%= post.me %></td>
         <td><%= post.date %></td>
         <td><%= post.eventName %></td>
         <td><%= post.freeSpace %></td>
