@@ -1,9 +1,12 @@
 class PostMailer < ActionMailer::Base
-  default from: "minomus.kanjikun@gmail.com"
+  default from: "from@example.com"
 
-  def post_email(user, post)
-    @title = post.title
-    mail(to: user.email, subject: "記事を投稿しました")
+  def post_email(post)
+    @eventName = post.eventName
+    @date = post.date
+    @freeSpace = post.freeSpace
+    
+    mail(to: post.to, cc: post.me, subject: "イベントの告知")
   end
   
 end

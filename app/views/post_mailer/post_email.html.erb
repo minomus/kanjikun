@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    <h1>新しい記事「<%= @title %> 」を投稿しました。</h1>
+    <h1>「<%= @eventName %> 」のお知らせ</h1>
+    <h4>日時：<%= @date %></h4>
     <p>
-      投稿しました。<br />
+      詳細：<br />
+      <%= @freeSpace %> <br />
+      <br />
+      ご参加お待ちしております。<br />
     </p>
   </body>
 </html>
