@@ -12,13 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :to %><br>
+    <%= f.text_area :to %>
   </div>
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <%= f.label :me %><br>
+    <%= f.text_field :me %>
   </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_area :date %>
+  </div>
+  <div class="field">
+    <%= f.label :eventName %><br>
+    <%= f.text_area :eventName %>
+  </div>
+  <div class="field">
+    <%= f.label :freeSpace %><br>
+    <%= f.text_field :freeSpace %>
+  </div>
+ 
+
   <div class="actions">
     <%= f.submit %>
   </div>
