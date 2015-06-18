@@ -33,7 +33,7 @@ class PostsController < ApplicationController
       	# deliverメソッドを使って、メールを送信する
       	PostMailer.post_email(@post).deliver
 
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html { redirect_to @post, notice: '以下の方に、イベント情報を送信しました！' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }

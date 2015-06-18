@@ -12,8 +12,6 @@
 <TD><%= event.date %></TD>
 <TD><%= event.eventsName %></TD>
 <TD><%= event.freeSpace %></TD>
-<TD><BUTTON type="submit"><%= link_to '参加する', new_join_path(event) %></BUTTON></TD>
-<TD><BUTTON type="submit"><%= link_to '参加者リスト', new_join_path(event) %></BUTTON></TD>
 <TD><BUTTON type="submit"><%= link_to '変更', edit_event_path(event) %></BUTTON></TD>
 <TD><BUTTON type="submit"><%= link_to '削除', event, method: :delete, data: { confirm: 'このイベントを削除してもよろしいですか?' } %></BUTTON></TD>
 </TR>
@@ -23,6 +21,7 @@
 <br clear="all"><br><br>
 
 
-<BUTTON type="submit"><%= link_to '新しいイベントを追加する', new_event_path %></BUTTON><BR><BR>
+<BUTTON type="submit"><%= link_to '参加する', new_join_path %></BUTTON>
+<BUTTON type="submit"><%= link_to '参加者リスト', joins_path %></BUTTON><BR><BR>
 
-<%= link_to 'TOPに戻る', events_path %>
+<a href="/">TOPに戻る</a>
