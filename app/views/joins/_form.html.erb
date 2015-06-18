@@ -19,7 +19,14 @@
     <%= f.label :belong %><br>
     <%= f.text_field :belong %>
   </div>
-  <div class="actions">
+
+  <div class="field">
+    <%= f.label :event_id %><br>
+    <%= f.collection_select(:event_id, Event.all, :id, :eventsName) %>
+  </div>
+    
+   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>

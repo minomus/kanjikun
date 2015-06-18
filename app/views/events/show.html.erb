@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>日時:</strong>
   <%= @event.date %>
 </p>
 
 <p>
-  <strong>Eventsname:</strong>
+  <strong>イベント名:</strong>
   <%= @event.eventsName %>
 </p>
 
 <p>
-  <strong>Freespace:</strong>
+  <strong>自由記入欄:</strong>
   <%= @event.freeSpace %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to '変更', edit_event_path(@event) %> |
+<%= link_to 'TOPに戻る', events_path %>

@@ -16,7 +16,7 @@ class JoinsController < ApplicationController
   def new
     @join = Join.new
   end
-
+    
   # GET /joins/1/edit
   def edit
   end
