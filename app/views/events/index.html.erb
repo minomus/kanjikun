@@ -1,4 +1,5 @@
 <h1>イベント一覧</h1>
+<br><br>
 
 <TABLE border="1" align="left">
 <TR>
@@ -18,10 +19,15 @@
   <% end %>
 </tbody>
 </TABLE>
-<br clear="all"><br><br>
+<br clear="all">
+
+<br><br>
 
 
-<BUTTON type="submit"><%= link_to '参加する', new_join_path %></BUTTON>
-<BUTTON type="submit"><%= link_to '参加者リスト', joins_path %></BUTTON><BR><BR>
+<button type="button" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-star"></span> <%= link_to '参加する', new_join_path %></button>
+
+<button type="button" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-star"></span> <%= link_to '参加者リスト', joins_path %></button>
+
+<BR><BR>
 
 <a href="/">TOPに戻る</a>
