@@ -1,16 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>To:</strong>
-  <%= @post.to %>
-</p>
-
-<p>
-  <strong>Me:</strong>
-  <%= @post.me %>
-</p>
-
-<p>
   <strong>Date:</strong>
   <%= @post.date %>
 </p>
@@ -24,8 +14,19 @@
   <strong>free:</strong>
   <%= @post.freeSpace %>
 </p>
+<br /><br />
+
+<h3>参加者リスト</h3>
+<% @comments.each do |comment| %>
+  <div>
+    <p><strong><%= comment.user_name %></strong>
+    (<%= comment.body %>)<br />
+      <%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: '削除してもよろしいですか？' } %></p>
+  </div>
+<% end %>
+<br / ><br />
+<%= render 'comments/form' %>
 
 <br><br>
-<p>続けてイベント告知を行う場合は、</p><BUTTON type="submit"><%= link_to 'こちらをClick', new_post_path %></BUTTON>
-<br><br><br>
+
 <a href="/">TOPに戻る</a>

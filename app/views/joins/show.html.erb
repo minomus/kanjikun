@@ -10,5 +10,10 @@
   <%= @join.belong %>
 </p>
 
+<p>
+  <strong>イベントid:</strong>
+  <%= @join.event_id %>
+</p>
+
 <%= link_to '登録内容変更', edit_join_path(@join) %> |
 <%= link_to '参加者登録ページ', joins_path %>

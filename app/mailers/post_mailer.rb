@@ -5,8 +5,10 @@ class PostMailer < ActionMailer::Base
     @eventName = post.eventName
     @date = post.date
     @freeSpace = post.freeSpace
+    #ホームページのアドレスを記述
+    @addr = "http://robust-racer-23-231387.apne1.nitrousbox.com/posts/" + post.id.to_s
     
-    mail(to: post.to, cc: post.me, subject: "イベントの告知")
+    mail(to: "minomus.kanjikun@gmail.com" , cc: post.me, bcc:post.to, subject: "イベントの告知")
   end
   
 end

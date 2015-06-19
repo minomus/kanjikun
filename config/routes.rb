@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :names
+
+  resources :comments
+
   resources :posts
 
   resources :events

@@ -18,13 +18,10 @@
   <div class="field">
     <%= f.label :belong %><br>
     <%= f.text_field :belong %>
-  </div>
+  </div> 
 
-  <div class="field">
-    <%= f.label :event_id %><br>
-    <%= f.collection_select(:event_id, Event.all, :id, :eventsName, :include_blank => true ) %>
-  </div>
-    
+<%= f.hidden_field :event_id %>  
+
    <div class="actions">
     <%= f.submit %>
   </div>

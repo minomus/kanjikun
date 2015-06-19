@@ -13,6 +13,7 @@
 <TD><%= event.date %></TD>
 <TD><%= event.eventsName %></TD>
 <TD><%= event.freeSpace %></TD>
+ <TD><BUTTON type="submit"><%= link_to '詳細', event %></BUTTON></TD>
 <TD><BUTTON type="submit"><%= link_to '変更', edit_event_path(event) %></BUTTON></TD>
 <TD><BUTTON type="submit"><%= link_to '削除', event, method: :delete, data: { confirm: 'このイベントを削除してもよろしいですか?' } %></BUTTON></TD>
 </TR>
@@ -24,9 +25,7 @@
 <br><br>
 
 
-<button type="button" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-star"></span> <%= link_to '参加する', new_join_path %></button>
-
-<button type="button" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-star"></span> <%= link_to '参加者リスト', joins_path %></button>
+<button type="button" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-star"></span> <%= link_to '参加する', new_name_path %></button>
 
 <BR><BR>
 

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>To:</strong>
+  <%= @post.to %>
+</p>
+
+<p>
+  <strong>Me:</strong>
+  <%= @post.me %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @post.date %>
+</p>
+
+<p>
+  <strong>eventName:</strong>
+  <%= @post.eventName %>
+</p>
+
+<p>
+  <strong>free:</strong>
+  <%= @post.freeSpace %>
+</p>
+
+<br><br>
+<p>続けてイベント告知を行う場合は、</p><BUTTON type="submit"><%= link_to 'こちらをClick', new_post_path %></BUTTON>
+<br><br><br>
+<a href="/">TOPに戻る</a>

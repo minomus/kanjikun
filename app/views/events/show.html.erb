@@ -15,5 +15,16 @@
   <%= @event.freeSpace %>
 </p>
 
+<h3>参加者リスト</h3>
+<% @names.each do |name| %>
+  <div>
+    <p><strong><%= name.name %></strong>
+      (<%= name.belong %>)<br />
+      <%= link_to 'Delete', name_path(name), method: :delete, data: { confirm: '削除してもよろしいですか？' } %></p>
+  </div>
+<% end %>
+
+<br><br>
+
 <br><br>
 <a href="/">TOPに戻る</a>
