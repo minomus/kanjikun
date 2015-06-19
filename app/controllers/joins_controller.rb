@@ -1,5 +1,5 @@
 class JoinsController < ApplicationController
-  before_action :set_join, only: [:show, :edit, :update, :destroy]
+  before_action :set_join, only: [:show, :edit, :update, :destroy, :select]
 
   # GET /joins
   # GET /joins.json
@@ -11,7 +11,7 @@ class JoinsController < ApplicationController
   # GET /joins/1.json
   def show
   end
-
+  
   # GET /joins/new
   def new
     @join = Join.new

@@ -1,9 +1,10 @@
-<h1>参加者登録ページ</h1>
+<h1>参加者一覧</h1>
 
 <table>
   <thead>
     <tr>
       <th>名前</th>
+      <th> | </th>
       <th>所属</th>
       <th colspan="3"></th>
     </tr>
@@ -13,6 +14,7 @@
     <% @joins.each do |join| %>
       <tr>
         <td><%= join.name %></td>
+        <td> | </td>
         <td><%= join.belong %></td>
         <td><%= link_to 'Show', join %></td>
         <td><%= link_to 'Edit', edit_join_path(join) %></td>
